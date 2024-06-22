@@ -9,6 +9,7 @@ const hotelRouter = require("./Routes/hotel.router");
 const categoryRouter = require("./Routes/category.router");
 const singleHotelRouter = require("./Routes/singleHotel.router");
 const authRouter = require("./Routes/auth.router");
+const wishlistRouter = require('./Routes/wishlist.router');
 
 const app = express();
 const PORT = process.env.PORT || 3050;
@@ -28,6 +29,7 @@ app.use("/api/hotels", hotelRouter);
 app.use("/api/category", categoryRouter);
 app.use("/api/hotels", singleHotelRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/wishlist", wishlistRouter);
 
 
 mongoose.connection.once('open', () => {
