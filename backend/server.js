@@ -7,6 +7,7 @@ const categoryDataImportRouter = require("./Routes/categoryImport.router");
 
 const hotelRouter = require("./Routes/hotel.router");
 const categoryRouter = require("./Routes/category.router");
+const singleHotelRouter = require("./Routes/singleHotel.router");
 
 const app = express();
 const PORT = process.env.PORT || 3050;
@@ -24,6 +25,8 @@ app.use("/api/hoteldata", hotelDataImportRouter);
 app.use("/api/categorydata", categoryDataImportRouter);
 app.use("/api/hotels", hotelRouter);
 app.use("/api/category", categoryRouter);
+app.use("/api/hotels", singleHotelRouter);
+
 
 mongoose.connection.once('open', () => {
     console.log('Connected to MongoDB');
