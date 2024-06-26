@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 app.use("/api/hoteldata", hotelDataImportRouter);
 app.use("/api/categorydata", categoryDataImportRouter);
 app.use("/api/hotels", hotelRouter);
-app.use("/api/category", categoryRouter);
+app.use("/api/categories", categoryRouter);
 app.use("/api/hotels", singleHotelRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/wishlist", wishlistRouter);
